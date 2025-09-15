@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 60px;
+  border-bottom: 1px solid #eee;
+  background: white;
+}
+
+/* Grup stânga (logo + search) */
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* distanță între logo și search bar */
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-box input {
+  padding: 8px 35px 8px 10px;
+  border: none;
+  border-radius: 10px;
+  background: #f3f4f6;
+  width: 250px;
+}
+
+.search-box i {
+  position: absolute;
+  right: 10px;
+  color: gray;
+  font-size: 14px;
+}
+
+/* Right side links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Notification */
+.notif {
+  position: relative;
+  background: #f3f4ff;
+  padding: 8px;
+  border-radius: 10px;
+}
+.notif span {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #4f46e5;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Profile */
+.profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+#des{
+  width: 600px;
+  height: auto;
+  margin-top: 20px;
+  padding-left: 300px;
+}
+#bur{
+  width: 600px;
+  height: auto;
+
+}
+
+/* Container */
+.categories {
+  display: flex;
+  gap: 100px;
+  margin-top: 30px;
+  padding-left: 360px;
+}
+
+/* Card */
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 80px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 18px;
+}
+
+.category span {
+  margin-top: 8px;
+  font-size: 14px;
+  color: black;
+}
+
+/* Hover efect */
+.category:hover {
+  border-color: blue;
+  transform: scale(1.05);
+}
+
+/* Active (selectat) */
+.category.active {
+  border-color: blue;
+}
+.category.active span {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Restaurants */
+.restaurants {
+    padding: 20px;
+}
+
+.restaurants h2 {
+    margin-bottom: 15px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px;
+}
+
+.card p {
+    margin: 0 10px 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.tag {
+    display: inline-block;
+    margin: 0 5px 10px 10px;
+    padding: 4px 8px;
+    font-size: 12px;
+    background: #eee;
+    border-radius: 10px;
+}
+#roly{
+  width: 560px;
+}
+
+#bu{
+  width: 560px;
+}
+#ni{
+  width: 560px;
+}
