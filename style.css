@@ -1,37 +1,39 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: #fafafa;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
-/* Navbar container */
+main {
+  width: 100%;
+  max-width: 1024px;
+  background: white;
+  min-height: 100vh;
+}
+
+/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 60px;
+  padding: 15px 30px;
   border-bottom: 1px solid #eee;
   background: white;
 }
 
-/* Grup stânga (logo + search) */
 .left-side {
   display: flex;
   align-items: center;
-  gap: 20px; /* distanță între logo și search bar */
+  gap: 20px;
 }
 
 .logo img {
   height: 40px;
-  width: auto;
 }
 
-/* Search box */
 .search-box {
-  display: flex;
-  align-items: center;
   position: relative;
 }
 
@@ -40,37 +42,37 @@ body {
   border: none;
   border-radius: 10px;
   background: #f3f4f6;
-  width: 250px;
+  width: 220px;
 }
 
 .search-box i {
   position: absolute;
   right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   color: gray;
-  font-size: 14px;
 }
 
-/* Right side links */
+/* Links dreapta */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px;
-  font-size: 14px;
-  margin-bottom: 10px;
-  padding-bottom: 30px;
+  gap: 25px;
 }
+
 .nav-links a {
   text-decoration: none;
   color: black;
+  font-size: 14px;
 }
 
-/* Notification */
 .notif {
   position: relative;
   background: #f3f4ff;
   padding: 8px;
   border-radius: 10px;
 }
+
 .notif span {
   position: absolute;
   top: -5px;
@@ -82,41 +84,41 @@ body {
   border-radius: 50%;
 }
 
-/* Profile */
 .profile img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
 }
 
-#des{
-  width: 600px;
-  height: auto;
-  margin-top: 20px;
-  padding-left: 300px;
-}
-#bur{
-  width: 600px;
-  height: auto;
-
+/* Bannere promo */
+section > div:first-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 30px;
 }
 
-/* Container */
+#des, #bur {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Categorii */
 .categories {
   display: flex;
-  gap: 100px;
-  margin-top: 30px;
-  padding-left: 360px;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0 40px;
 }
 
-/* Card */
 .category {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 80px;
+  width: 90px;
+  height: 75px;
   border: 2px solid #e5e7eb;
   border-radius: 12px;
   cursor: pointer;
@@ -130,81 +132,68 @@ body {
   color: black;
 }
 
-/* Hover efect */
 .category:hover {
   border-color: blue;
   transform: scale(1.05);
 }
 
-/* Active (selectat) */
 .category.active {
   border-color: blue;
 }
+
 .category.active span {
   color: blue;
   font-weight: bold;
 }
 
-/* Restaurants */
+/* Restaurante */
 .restaurants {
-    padding: 20px;
+  padding: 20px 30px 60px;
 }
 
 .restaurants h2 {
-    margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .card {
-    flex: 1;
-    min-width: 250px;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .card h3 {
-    margin: 10px;
+  margin: 10px;
 }
 
 .card p {
-    margin: 0 10px 10px;
-    font-size: 14px;
-    color: #555;
+  margin: 0 10px 10px;
+  font-size: 14px;
+  color: #555;
 }
 
 .tag {
-    display: inline-block;
-    margin: 0 5px 10px 10px;
-    padding: 4px 8px;
-    font-size: 12px;
-    background: #eee;
-    border-radius: 10px;
-}
-#roly{
-  width: 560px;
-}
-
-#bu{
-  width: 560px;
-}
-#ni{
-  width: 560px;
+  display: inline-block;
+  margin: 0 5px 10px 10px;
+  padding: 4px 8px;
+  font-size: 12px;
+  background: #eee;
+  border-radius: 10px;
 }
