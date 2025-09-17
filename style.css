@@ -108,23 +108,10 @@ main {
 }
 
 .banner img {
-  width: 160px;
+  width: 400px;
   height: auto;
 }
 
-.banner .text {
-  color: black;
-}
-
-.banner .text p {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.banner .text h3 {
-  font-size: 26px;
-  font-weight: bold;
-}
 
 /* Culori diferite pentru carduri */
 .banner.purple {
@@ -140,7 +127,7 @@ main {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin: 20px 0 40px;
+  margin: 40px 0 80px;
 }
 
 .category {
