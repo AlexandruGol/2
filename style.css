@@ -1,13 +1,8 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* 🔹 General */
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: #f3f4f6;
+  background: #fafafa;
   display: flex;
   justify-content: center;
 }
@@ -94,7 +89,7 @@ main {
   border-radius: 50%;
 }
 
-/* 🔹 Bannere promo */
+/* 🔹 Bannere promo curate */
 .banners {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -104,36 +99,47 @@ main {
 
 .banner {
   position: relative;
-  border-radius: 12px;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   overflow: hidden;
-  background: #f9fafb;
 }
 
 .banner img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
+  width: 160px;
+  height: auto;
 }
 
 .banner .text {
-  position: absolute;
-  top: 15px;
-  left: 15px;
   color: black;
 }
 
+.banner .text p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
 .banner .text h3 {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
-  margin-top: 5px;
+}
+
+/* Culori diferite pentru carduri */
+.banner.purple {
+  background: #f3f0ff;
+}
+
+.banner.orange {
+  background: #fff4ec;
 }
 
 /* 🔹 Categorii */
 .categories {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   margin: 20px 0 40px;
 }
 
@@ -151,8 +157,8 @@ main {
   font-size: 22px;
 }
 
-.category p {
-  margin: 5px 0 0;
+.category span {
+  margin-top: 5px;
   font-size: 14px;
 }
 
@@ -160,7 +166,7 @@ main {
   border-color: blue;
 }
 
-.category.active p {
+.category.active span {
   color: blue;
   font-weight: bold;
 }
@@ -186,6 +192,7 @@ main {
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s;
+  position: relative;
 }
 
 .card:hover {
@@ -215,4 +222,17 @@ main {
   font-size: 12px;
   background: #eee;
   border-radius: 10px;
+}
+
+/* 🔹 Eticheta FEATURED */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
 }
