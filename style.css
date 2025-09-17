@@ -2,37 +2,32 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #fafafa;
-  display: flex;
-  justify-content: center;
 }
 
-main {
-  width: 1024px;
-  background: #fff;
-  min-height: 100vh;
-}
-
-/* 🔹 Navbar */
+/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 30px;
+  padding: 10px 20px;
   border-bottom: 1px solid #eee;
+  background: white;
+  flex-wrap: wrap;
 }
 
 .left-side {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .logo img {
   height: 40px;
-  width: auto;
 }
 
 .search-box {
+  display: flex;
+  align-items: center;
   position: relative;
 }
 
@@ -41,27 +36,25 @@ main {
   border: none;
   border-radius: 10px;
   background: #f3f4f6;
-  width: 220px;
+  width: 200px;
 }
 
 .search-box i {
   position: absolute;
   right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
   color: gray;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
+  font-size: 14px;
+  flex-wrap: wrap;
 }
-
 .nav-links a {
   text-decoration: none;
   color: black;
-  font-size: 14px;
 }
 
 .notif {
@@ -70,7 +63,6 @@ main {
   padding: 8px;
   border-radius: 10px;
 }
-
 .notif span {
   position: absolute;
   top: -5px;
@@ -88,80 +80,86 @@ main {
   border-radius: 50%;
 }
 
-/* 🔹 Bannere promo */
+/* Banners */
 .banners {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
-  margin: 30px;
+  padding: 20px;
 }
-
 .banner {
   position: relative;
-  border-radius: 12px;
   overflow: hidden;
+  border-radius: 12px;
 }
-
 .banner img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
   border-radius: 12px;
 }
-
-
-
-/* 🔹 Categorii */
-.categories {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 20px 0 40px;
+.banner-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: black;
+}
+.banner-text h3 {
+  margin: 5px 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #e63946;
 }
 
+/* Categories */
+.categories {
+  display: flex;
+  gap: 15px;
+  margin: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .category {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90px;
-  height: 75px;
+  min-width: 80px;
+  height: 80px;
   border: 2px solid #e5e7eb;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: 0.2s;
   font-size: 22px;
+  background: white;
 }
-
 .category p {
   margin: 5px 0 0;
   font-size: 14px;
 }
-
+.category:hover {
+  border-color: blue;
+  transform: scale(1.05);
+}
 .category.active {
   border-color: blue;
 }
-
 .category.active p {
   color: blue;
   font-weight: bold;
 }
 
-/* 🔹 Restaurante */
+/* Restaurants */
 .restaurants {
-  padding: 20px 30px 60px;
+  padding: 20px;
 }
-
 .restaurants h2 {
   margin-bottom: 20px;
+  text-align: center;
 }
-
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
 }
-
 .card {
   background: #fff;
   border-radius: 10px;
@@ -170,27 +168,22 @@ main {
   transition: transform 0.2s;
   position: relative;
 }
-
 .card:hover {
   transform: translateY(-5px);
 }
-
 .card img {
   width: 100%;
   height: 160px;
   object-fit: cover;
 }
-
 .card h3 {
   margin: 10px;
 }
-
 .card p {
   margin: 0 10px 10px;
   font-size: 14px;
   color: #555;
 }
-
 .tag {
   display: inline-block;
   margin: 0 5px 10px 10px;
@@ -200,15 +193,52 @@ main {
   border-radius: 10px;
 }
 
-/* 🔹 Eticheta FEATURED */
-.badge {
+/* FEATURED badge */
+.featured-badge {
   position: absolute;
   top: 10px;
   left: 10px;
   background: #2563eb;
-  color: white;
+  color: #fff;
   font-size: 12px;
+  font-weight: bold;
   padding: 4px 8px;
   border-radius: 6px;
-  font-weight: bold;
+}
+
+/* Extra images (cum aveai tu) */
+.extra-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+#roly, #bu, #ni {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ✅ Desktop ≥1024px */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 10px 60px;
+  }
+  .search-box input {
+    width: 300px;
+  }
+  .banners {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px 60px;
+  }
+  .categories {
+    gap: 40px;
+  }
+  .restaurants .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .card img {
+    height: 200px;
+  }
 }
