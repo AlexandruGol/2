@@ -1,16 +1,8 @@
-html, body {
-  height: 100vh;
+body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #fafafa;
-  overflow: hidden; /* 🚫 dezactivează scroll */
 }
-main {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 
 /* Navbar */
 .navbar {
